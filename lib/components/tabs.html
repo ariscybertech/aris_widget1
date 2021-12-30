@@ -1,0 +1,67 @@
+<link rel="import" href="swap.html">
+<polymer-element name="tabs-widget">
+  <template>
+    <style>
+    content[select="li"]::content > li {
+      position: relative;
+      display: block;
+      float: left;
+      margin-bottom: -1px;
+    }
+
+    content[select="li"]::content > li > a {
+      position: relative;
+      display: block;
+      padding: 10px 15px;
+      margin-right: 2px;
+      line-height: 1.428571429;
+      border: 1px solid transparent;
+      border-radius: 4px 4px 0 0;
+    }
+
+    /*
+     * .nav > li > a:hover,
+     * .nav > li > a:focus
+     */
+    content[select="li"]::content > li > a:hover,
+    content[select="li"]::content > li > a:focus {
+      text-decoration: none;
+      background-color: #eeeeee;
+    }
+
+    content[select="li"]::content > li.active > a,
+    content[select="li"]::content > li.active > a:hover,
+    content[select="li"]::content > li.active > a:focus {
+      color: #555555;
+      cursor: default;
+      background-color: #ffffff;
+      border: 1px solid #dddddd;
+      border-bottom-color: transparent;
+    }
+
+    /*
+     *  Custom bottom margin
+     */
+    ul.nav.nav-tabs {
+      margin-bottom: 15px;
+    }
+
+    /* @polyfill :host > swap-widget > .content > * */
+    swap-widget > content::content > * {
+      display: none;
+    }
+
+    /* @polyfill :host > swap-widget > .content > .active */
+    swap-widget > content::content > .active {
+      display: block;
+    }
+    </style>
+    <ul class='nav nav-tabs'>
+      <content select='li'></content>
+    </ul>
+    <swap-widget>
+      <content></content>
+    </swap-widget>
+  </template>
+  <script type="application/dart" src='tabs.dart'></script>
+</polymer-element>

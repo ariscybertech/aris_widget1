@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<link rel="import" href="show_hide.html">
+
+<polymer-element name="dropdown-widget" extends="show-hide-widget">
+  <template>
+    <style>
+      :host {
+        display: inline-block;
+        position: relative;
+      }
+
+      /* This is custom copied for children of .nav */
+      ::content > a {
+        padding: 10px 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        line-height: 20px;
+        position: relative;
+        display: block;
+        color: #777;
+      }
+
+      ::content > a:hover, ::content > a:focus {
+        text-decoration: none;
+        background-color: #eeeeee;
+      }
+
+      ::content > .dropdown-menu {
+        margin-top: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+      }
+    </style>
+    <content></content>
+  </template>
+  <script type="application/dart" src='dropdown.dart'></script>
+</polymer-element>

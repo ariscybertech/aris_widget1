@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<link rel="import" href="show_hide.html">
+
+<polymer-element name="alert-widget" extends="show-hide-widget">
+  <template>
+    <style>
+      :host {
+        display: block;
+
+        /* Stolen from .panel style in bootstrap */
+        margin-bottom: 20px;
+      }
+
+      .alert {
+        margin-bottom: 0;
+      }
+    </style>
+    <div id='_alertDiv' class='alert'>
+      <content></content>
+    </div>
+  </template>
+  <script type="application/dart" src='alert.dart'></script>
+</polymer-element>

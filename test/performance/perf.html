@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>perf</title>
+
+    <style>
+          .content {
+            position: relative;
+            overflow: hidden;
+          }
+          .content > * {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            margin: 0 auto;
+            width: 100%;
+          }
+          .content > .active {
+            position: relative;
+            display: block;
+          }
+          .content > .prev {
+            display: block;
+          }
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <button id='do-swap'>Do swap</button>
+
+  <div class='content'>
+    <img src="//twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-01.jpg">
+    <img src="//twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-02.jpg">
+    <img src="//twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-03.jpg">
+  </div>
+
+    <script type="application/dart" src="perf.dart"></script>
+    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

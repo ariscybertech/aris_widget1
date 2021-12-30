@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <body>
+<polymer-element name="swap-widget">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      .content {
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* @polyfill :host > .content > * */
+      .content > content::content > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        margin: 0 auto;
+      }
+
+      /* @polyfill :host > .content > .active */
+      .content > content::content > .active {
+        position: relative;
+        display: block;
+      }
+
+      /* @polyfill :host > .content > .prev */
+      .content > content::content > .prev {
+        display: block;
+      }
+
+    </style>
+    <div class='content'>
+      <content></content>
+    </div>
+  </template>
+  <script type="application/dart" src='swap.dart'></script>
+</polymer-element>
+  </body>
+</html>

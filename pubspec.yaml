@@ -1,0 +1,20 @@
+name: widget
+version: 0.3.0-dev
+author: Kevin Moore <kevmoo@google.com>
+description: A set of reusable Web Components for Dart applications
+homepage: https://github.com/kevmoo/widget.dart
+environment:
+  sdk: '>=1.0.0 <2.0.0'
+dependencies:
+  bot: '>=0.25.3'
+  bot_web: '>=0.21.0'
+  polymer: '>=0.9.1+1 <0.10.0'
+dev_dependencies:
+  bot_test: '>=0.1.5'
+  csslib: '>=0.9.0 <0.10.0'
+  hop: '>=0.28.3+2'
+  html5lib: '>=0.9.1 <0.10.0'
+  unittest: '>=0.9.0 <0.10.0'
+transformers:
+- polymer:
+    entry_points: web/index.html

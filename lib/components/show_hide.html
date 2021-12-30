@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<polymer-element name='show-hide-widget' attributes='isShown'>
+  <template if='{{isShown}}'>
+    <style>
+      :host {
+        display: inline-block;
+      }
+
+      .wrapper.false {
+        display: none;
+      }
+    </style>
+    <div class='wrapper {{isShown}}'>
+      <content></content>
+    </div>
+  </template>
+  <script type="application/dart" src="show_hide.dart"></script>
+</polymer-element>

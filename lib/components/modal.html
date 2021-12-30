@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<link rel="import" href="show_hide.html">
+
+<polymer-element name="modal-widget" extends="show-hide-widget">
+  <template>
+    <div class='modal'>
+      <div class='modal-dialog'>
+        <div class='modal-content'>
+          <content></content>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script type="application/dart" src='modal.dart'></script>
+</polymer-element>
